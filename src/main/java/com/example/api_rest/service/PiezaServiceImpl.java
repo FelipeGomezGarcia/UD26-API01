@@ -27,15 +27,15 @@ public class PiezaServiceImpl implements IPiezaService{
 	}
 
 	@Override
-	public Pieza piezaXID(int id) {
+	public Pieza piezaXID(int codigo) {
 		// TODO Auto-generated method stub
-		return iPiezaDAO.findById(id).get();
+		return iPiezaDAO.findById(codigo).get();
 	}
 
 	@Override
-	public Pieza actualizarPieza(int id, Pieza pieza) {
+	public Pieza actualizarPieza(int codigo, Pieza pieza) {
 		// TODO Auto-generated method stub
-		Pieza piezaActualizada = iPiezaDAO.findById(id).get();
+		Pieza piezaActualizada = iPiezaDAO.findById(codigo).get();
 		
 		piezaActualizada.setNombre(pieza.getNombre());
 		
@@ -43,8 +43,8 @@ public class PiezaServiceImpl implements IPiezaService{
 	}
 
 	@Override
-	public void eliminarPieza(int id) {
+	public void eliminarPieza(int codigo) {
 		// TODO Auto-generated method stub
-		iPiezaDAO.deleteById(id);
+		iPiezaDAO.deleteById(codigo);
 	}
 }

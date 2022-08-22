@@ -10,9 +10,9 @@ public interface IPiezaService {
 	
 	public Pieza guardarPieza(Pieza pieza);
 	
-	public Pieza piezaXID(int id);
+	public Pieza piezaXID(int codigo);
 	
-	public Pieza actualizarPieza(int id, Pieza pieza);
+	public Pieza actualizarPieza(int codigo, Pieza pieza);
 	
-	public void eliminarPieza(int id);
+	public void eliminarPieza(int codigo);
 }
